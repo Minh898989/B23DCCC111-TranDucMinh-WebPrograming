@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <div id="table-container"></div>
+
+<script>
+    // Tạo phần tử bảng
+    const table = document.createElement('table');
+    table.border = '1'; // Thiết lập viền cho bảng (tùy chọn)
+
+    // Tạo 3 hàng, mỗi hàng có 3 cột
+    for (let i = 0; i < 3; i++) {
+        const row = document.createElement('tr');
+
+        for (let j = 0; j < 3; j++) {
+            const cell = document.createElement('td');
+            cell.textContent = `Row ${i + 1}, Cell ${j + 1}`;
+            row.appendChild(cell);
+        }
+
+        table.appendChild(row);
+    }
+
+    // Thêm bảng vào phần tử có id là "table-container"
+    const container = document.getElementById('table-container');
+    container.appendChild(table);
+   </script> 
+</body>
+</html>
